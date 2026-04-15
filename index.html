@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="Imagenes/icono.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - input (Documentación).</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1><code>HTML</code> - input</h1>
+    <p>
+        <b>Introducción:</b>
+    </p>
+    <p>
+       El elemento <code>input</code> en <span class="naranja">HTML</span> es fundamental para la creación de formularios <b>WEB</b>, ya que permite a los usuarios ingresar datos que luego pueden ser procesados por el sitio. A través de este elemento se pueden generar diferentes tipos de campos, como cajas de texto, botones, casillas de verificación, selectores de fecha, entre otros. Su versatilidad lo convierte en una herramienta clave para la interración entre el usuario y la página <b>WEB</b>, ya que se adapta a distintas necesidades de entrada información. 
+    </p>
+
+    <h2>Tipos de input, ejemplo y difentes usos.</h2>
+    <h3>text</h3>
+    <p>
+        Existen distintos tipos de <code class="gris">input</code>, cada uno con usos específicos y ejemplos particulares. El primero que vamos a utilizar es el tipo texto <span class="celeste">type</span>=<span class="naranja">"text"</span>, que es el más común y ampliamente utilizado en formularios. A continuación, se muestra un ejemplo de cómo se emplea esta etiqueta en el código <span class="naranja">HTML</span>.
+    </p>
+    <p>
+        <b>Ejemplo:</b>
+    </p>
+<pre><code class="cpp">1    &lt;<span class="azul">body</span>>
+2       &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"text"</span>>
+3   &lt;/<span class="azul">body</span>></code></pre>
+        <p>
+            Como podemos ver, la etiqueta <code>input</code> es un elemento visual, por lo que debe colocarse dentro del <code>body</code> de la página <b>WEB</b>. Para utilizarla, se comienza con el símbolo <code class="gris">menor que</code>, <code>&lt;</code> seguido de la palabra <code>input</code>, formando <span class="azul">&lt;input></span>. Luego, se añade el atributo <span class="celeste">type</span>=<span class="naranja">"text"</span> para indicar que el campo será de tipo texto. De esta manera, la etiqueta completa queda escrita así: <code class="gris">&lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"texto"</span>></code>.
+        </p>
+        <p>
+            A continuación, observaremos qué muestra la etiqueta <code>input</code> al ser incorporada en nuestro documento.
+        </p>
+        <div class="center">
+            <img src="Imagenes/imagen1.png" alt="">
+        </div>
+        <p>
+            En nuestra página veremos un cuadro vacío en el que podremos escribir una palabra o cualquier tipo de texto.
+        </p>
+        <div class="center">
+            <img src="Imagenes/imagen2.png" alt="">
+        </div>
+        <p>
+            A continuación, vamos a vincular nuestra etiqueta <code class="gris">label</code> con el campo <code class="gris">input</code> utilizando el atributo <code class="gris"><span class="celeste">id</span>=<span class="naranja">""</span></code>. De esta manera, al hacer clic sobre el contenido del <code class="gris">label</code>, el cursor y el foco se posicinará automáticamente en el campo de entrada correspondiente.
+        </p>
+        
+<pre><code class="cpp">1    &lt;<span class="azul">body</span>>
+2       &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"texto"</span>>Nombre: &lt;/<span class="azul">label</span>>
+3       &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"text"</span> <span class="celeste">id</span>=<span class="naranja">"texto"</span>>
+4   &lt;/<span class="azul">body</span>></code></pre>
+        <p>
+            En este ejemplo, podemos observar que el <code class="gris">input</code> utilizamos el <span class="celeste">atributo</span> <code>id=""</code> con la identificación (<span class="celeste">id</span>) <code class="gris">texto</code>, y en el <code class="gris">label</code> utilizamos el atributo <code class="gris">for</code> para hacer referencia a ese mismo <code class="gris">id</code> con la declaración <code class="gris">texto</code>.
+        </p>    
+        <h3>
+            email.
+        </h3>
+        <p>
+            Ahora vamos a trabajar con otro tipo de elemento <code class="gris">input</code>, específicamente el de tipo <code>email</code>. Su uso es muy similar al del tipo <code class="gris">text</code>. La principal diferencia es que cambiaremos el atributo de <code class="gris">type="text"</code> por <code class="gris"><b>type="email"</b></code>. También actualizaremos el atributo <code class="gris">id</code>, y createmos una nueva etiqueta <code class="gris">label</code> asociada a este campo de tipo <b>email</b>. A continuación el código de ejemplo:
+        </p>
+<pre><code class="cpp">1    &lt;<span class="azul">body</span>>
+2       &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"texto"</span>>Nombre: &lt;/<span class="azul">label</span>>
+3       &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"text"</span> <span class="celeste">id</span>=<span class="naranja">"texto"</span>>
+4       &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"email"</span>>Email: &lt;/<span class="azul">label</span>>
+5       &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"email"</span> <span class="celeste">id</span>= <span class="naranja">"email"</span>>
+6   &lt;/<span class="azul">body</span>></code></pre>
+        <p>
+            Se ha agregado un nuevo elemento <code class="gris">input</code> adicional al ya existente. Este nuevo campo tiene el atributo <code class="gris">type="email"</code> con el <code class="gris">id="email"</code>. Asimismo, se ha creado una nueva etiqueta <code class="gris">label</code> asociada a este campo, utilizando el atributo <code class="gris">for="email"</code> para vincularla correctamente con el <code class="gris">input</code>.
+        </p>
+    <div class="center">
+        <img src="Imagenes/imagen4.png" alt="">
+    </div>
+    <div class="center">
+        <b>¿Qué hace especial a este último campo de entrada?</b>
+    </div>
+    <p>
+        Lo interesante es que, al tener el tipo <code class="gris">email</code>, si el usuario ingresa un valor que no cumple con el formato de una dirección de correo electrónico y se intenta enviar el formulario mediante un botón <code class="gris">submit</code>, el navegador mostrará automaticamente un mensaje de error.
+    </p>
+    <div class="center">
+        <b>¿Qué es un formulario y qué significa <code>submit</code>?</b>
+    </div>
+    <p>
+        Un formulario es un documento, ya sea en formato físico o digital, diseñado para que el usuario ingrese datos de manera estructurada Ej: <code class="gris">nombre</code>, <code class="gris">Apellido</code>, <code class="gris">Dirección</code>. En campos específicos. Estos datos luego pueden ser almacenados y procesados según se requieran.
+    </p>
+    <p>
+        Por otro lado <i>submit</i>, que en español significa <code class="gris">enviar</code> o <code class="gris">entregar</code>, hace referencia en el contexto de los formularios WEB a la acción de enviar los datos que el usuario ha completado, para que sean procesados o guardados por el sistema.
+    </p>
+    <h3>form</h3>
+    <p>
+        Al crear un formulario en <code class="gris">HTML</code>, todos los elementos que lo componen deben estar contenidos dentro de la etiqueta <code class="gris">form</code>, que actúa como contenedor principal del formulario.
+    </p>
+<pre><code class="cpp">1    &lt;<span class="azul">body</span>>
+2       &lt;<span class="azul">form</span>>
+3           &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"texto"</span>>Nombre: &lt;/<span class="azul">label</span>>
+4           &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"text"</span> <span class="celeste">id</span>=<span class="naranja">"texto"</span>>
+5           &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"email"</span>>Email: &lt;/<span class="azul">label</span>>
+6           &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"email"</span> <span class="celeste">id</span>=<span class="naranja">"email"</span>>
+7       &lt;/<span class="azul">form</span>>
+8   &lt;/<span class="azul">body</span>></code></pre>
+        <br>
+        <h3>submit</h3>
+        <p>
+            La siguiente etiqueta <code class="gros">input</code> que exploraremos es la de tipo <code class="gris">submit</code>. Para implementarla, Crearemos un nuevo elemento <code class="gris">input</code> y esta vez le asignaremos el atributo <code class="gris"><span class="azul">type</span>=<span class="naranja">"submit"</span></code>. Veamos qué ocurre al hacerlo.
+        </p>  
+<pre><code class="cpp">1    &lt;<span class="azul">body</span>>
+2       &lt;<span class="azul">form</span>>
+3           &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"texto"</span>>Nombre: &lt;/<span class="azul">label</span>>
+4           &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"text"</span> <span class="celeste">id</span>=<span class="naranja">"texto"</span>>
+5           &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"email"</span>>Email: &lt;/<span class="azul">label</span>>
+6           &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"email"</span> <span class="celeste">id</span>=<span class="naranja">"email"</span>>
+7           &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"submit"</span>>
+8       &lt;/<span class="azul">form</span>>
+9   &lt;/<span class="azul">body</span>></code></pre>
+
+<br>
+
+        <div class="center">
+            <img src="Imagenes/imagen5.png" alt="">
+        </div>
+        <p>
+            Como podemos ver, aparece un <code class="gris">boton</code> con el texto <code class="gris">Enviar</code>. Este botón tiene la función de enviar la información ingresada en el formulario. En este punto, si introducimos un valor en el campo de correo electrónico (es decir, el <code class="gris">input</code> de tipo <code class="gris">email</code>) que no cumple con el formato válido, el navegador nos motrará un mensaje de error. Veamos qué tipo de mensaje se presenta en este caso.
+        </p>
+        <div class="center">
+            <img src="Imagenes/imagen6.png" alt="">
+        </div>
+        <p>
+            Para corregir este error, agregaremos el símbolo <code class="gris">@</code> a la dirección ingresada y observaremos qué sucede a continuación.
+        </p>
+        <div class="center">
+            <img src="Imagenes/imagen7.png" alt="">
+        </div>
+        <p>
+            Presionaremos enviar y verificaremos que el contenido de los campos de entrada se envíe correctamente.
+        </p>
+        <div class="center">
+            <img src="Imagenes/imagen8.png" alt="">
+        </div>
+        <p>
+            Efectivamente, al cumplir únicamente con la estructura de un correo electrónico, este <code class="gris">input</code> se enviara.
+        </p>
+<pre><code class="cpp" style="text-align: center;"><i>En la imagen anterior se muestra <span class="amarillo">dato=Juan</span> & <span class="amarillo">email=hola</span>. Eso es porque el <span class="azul">input</span> de nombre 
+tiene el atributo <span class="celeste">name</span> con la declaración <span class="naranja">dato</span>, 
+y el email tiene un atributo <span class="celeste">name</span> con la declaración <span class="naranja">email</span>.</i></code></pre>
+        <div class="center">
+            <b>¿Comó podemos cambiar la palabra <code class="gris">Enviar</code> en el botón por otra palabra como <code class="gris">aceptar</code></b>
+        </div>
+        <p>
+            Para realizar este cambio, en el elemento <code class="gris">input</code> de tipo <code class="gris">submit</code> debemos agregar el atributo <code class="gris">value</code> y escribir dentro de él la palabra deseada, como por ejemplo <code class="gris">aceptar</code>. De esta forma, podremos personalizar el texto que aparece en el botón de envío según nuestras preferencias.
+        </p>
+<pre><code class="cpp">&lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"submit"</span> <span class="celeste">value</span>=<span class="naranja">"aceptar"</span>></code></pre>
+
+        <p>
+            Veamos el cambio en la página:
+        </p>
+        <div class="center">
+            <img src="Imagenes/imagen9.png" alt="">
+        </div>
+        <br>
+        <h3>password</h3>
+        <p>
+            La siguiente etiqueta <code class="gris">input</code> será de tipo <code class="gris">password</code>. Para implementarla, debemos crear un nuevo <code class="gris">input</code> con el atributo <span class="celeste">type</span> establecido en <span class="naranja">password</span>. Además, asignaremos un <span class="celeste">name</span> a este campo, por ejemplo: <span class="naranja">contraseña</span>. También crearemos una etiqueta <code class="gris">label</code> con el texto <b>Ingresa su contraseña: </b>y un atributo <span class="celeste">for</span> con la declaración <span class="naranja">contra</span> para asociarlo con el <span class="azul">input</span>. Para que esta asociación funcione, el <span class="azul">input</span> debe tener un atributo <span class="celeste">id</span> con la declaración <span class="naranja">contra</span>. A continuación, veamos un ejemplo en el siguiente código:
+        </p>
+<pre><code class="cpp">1    &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"contra"</span>>Ingrese su contraseña: &lt;/<span class="azul">label</span>>
+2       &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"password"</span> <span class="celeste">name</span>=<span class="naranja">"contraseña"</span> <span class="celeste">id</span>=<span class="naranja">"contra"</span>></code></pre>
+        <br>
+        <p>
+            Veamos como el <code class="gris">input</code> de tipo <code class="gris">password</code> en el documento:
+        </p>
+        <div class="center">
+            <img src="Imagenes/imagen10.png" alt="">
+        </div>
+        <p>
+            La etiqueta de tipo <code class="gris">password</code> es útil porque oculta los caracteres que escribamos, mostrando puntos en su lugar para proteger la privacidad de la contraseña.
+        </p>
+        <p>
+            Continuemos con el siguiente tipo de <code class="gris">input</code>, que es el tipo <code class="gris">radio</code>. Para crear este <code class="gris">input</code>, utilizaremos el atributo <span class="celeste">type</span> con la declaración <span class="naranja">radio</span>, quedando de la siguiente manera: <code class="gris">&lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"naranja"</span>></code>. Además, crearemos un <code class="gris">label</code> mediante el atributo <span class="celeste">id</span> en el <code class="gris">input</code>, cuya declaración será <span class="naranja">roj</span>, y el atributo <span class="celeste">for</span> en el <span class="azul">label</span>, con la misma declaración <span class="naranja">roj</span>.
+        </p>
+        <b style="text-align: center;">Veamos la codificación:</b>
+<pre><code class="cpp">1    &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"roj"</span>>Rojo: &lt;/<span class="azul">label</span>>
+2       &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"radio"</span> <span class="celeste">id</span>=<span class="naranja">"roj"</span>></code></pre>
+<div class="center">
+<pre><code class="cpp">Al documento le agregamos <span class="azul">br</span> para que los elementos se muestren uno debajo del otro.</code></pre>
+</div>
+        <br>
+        <p>
+            Veamos el resultado en el documento:
+        </p>
+        <div class="center">
+            <img src="Imagenes/imagen11.png" alt="">
+        </div>
+        <p>
+            Como podemos observar, tenemos un <span class="azul">label</span> que dice <code class="gris">Rojo:</code>, seguido de un circulo que nos permite realizar una selección.
+        </p>
+        <p>
+            Normalmente, no se utiliza un solo radio, ya que este tipo <code class="gris">input</code> sirve para elegir entre varias opciones. Con solo una opción, no podemos distinguir claramente su propósito. Para resolver esto, crearemos dos radio adicionales y continuaremos trabajando con ellos.
+        </p>
+        <p>
+            Creamos un <code class="gris">input</code> de tipo radio parra el color azul y otro para el color verde. A continuación codificación de ejemplo, y mostraremos cómo crear estos dos inputs radio adicionales
+        </p>
+<pre><code class="cpp">1    &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"roj"</span>>Rojo: &lt;/<span class="azul">label</span>>
+2       &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"radio"</span> <span class="celeste">id</span>=<span class="naranja">"roj"</span>>
+3           &lt;<span class="azul">br</span>>
+4       &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"azu"</span>>Azul: &lt;/<span class="azul">label</span>>
+5           &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"radio"</span> <span class="celeste">id</span>=<span class="naranja">"azu"</span>>
+6           &lt;<span class="azul">br</span>>
+7       &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"ver"</span>>Verde: &lt;/<span class="azul">label</span>>
+8           &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"radio"</span> <span class="celeste">id</span>=<span class="naranja">"ver"</span>>
+9       &lt;<span class="azul">br</span>></code></pre>
+
+            <br>
+            <p>
+                Veamos el resultado en el documento:
+            </p>
+            <div class="center">
+                <img src="Imagenes/imagen12.png" alt="">
+            </div>
+            <p>
+                Es importante añador un detalle clave a nuestras etiquetas <code class="gris">input</code> de tipo radio. Necesitamos especificar el valor que se enviará cuando cada opción está seleccionada. Por ejemplo, si elegimos el color Rojo, queremos que se devuelvaa el valor <code class="gris">red</code>, si seleccionamos Azul, debe devolver <code class="gris">blue</code>, y si optamos por Verde, el valor será <code class="gris">green</code>.
+            </p>
+            <p>
+                Para lograr esto, debemos agregar un atributo adicional a cada etiqueta <code class="gris">input</code> de tipo radio, llamado <code>value</code>. Para el color rojo, asignaremos <code class="gris"><span class="celeste">value</span>=<span class="naranja">"red"</span></code>, para el Azul, <code class="gris"><span class="celeste">value</span>=<span class="naranja">"blue"</span>, y para el Verde, <code class="gris"><span class="celeste">value</span>=<span class="naranja">"green"</span></code>.
+            </p>
+            <p>
+                Además, es fundamental que todas las opciones de radio compartan el mismo <span class="celeste">name</span>. En esta caso, nombramos todo los <code class="gris">input</code> de tipo radio como <code class="gris">inputRadio</code>.
+            </p>
+            <p>
+                Esta configuración nos permitirá seleccionar una opción y obtener el valor asociado cuando se envia el formulario. A continuación, aseguremonos de aplicar correctamente estos cambios en nuestras etiquetas de <span class="celeste">input</span> radio.
+            </p>
+<pre><code class="cpp">1    &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"roj"</span>>Rojo: &lt;/<span class="azul">label</span>>
+2       &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"radio"</span> <span class="azul">id</span>=<span class="naranja">"roj"</span> <span class="azul">name</span>=<span class="naranja">"inputRadio"</span>>
+3       &lt;<span class="azul">br</span>>
+4   &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"azu"</span>>Azul: &lt;/<span class="azul">label</span>>
+5       &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"radio"</span> <span class="azul">id</span>=<span class="naranja">"azu"</span> <span class="azul">name</span>=<span class="naranja">"inputRadio"</span>>
+6       &lt;<span class="azul">br</span>>
+7   &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"ver"</span>>Verde: &lt;/<span class="azul">label</span>>
+8       &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"radio"</span> <span class="azul">id</span>=<span class="naranja">"ver"</span> <span class="azul">name</span>=<span class="naranja">"inputRadio"</span>>
+9       &lt;<span class="azul">br</span>></pre></code>
+
+        <br>
+        <div class="center">
+            <p><b>¿Por qué damos el mismo nombre a todos los <code class="gris">input</code> de tipo radio</b></p>
+        </div>
+        <p>
+            Lo hacemos para indicar que pertenecen a un conjunto de opciones. Al asignarle el mismo nombre <span class="celeste">name</span>, estamos especificando que solo se puede seleccionar una opción a la vez dentro de este grupo. Si no les asignamos el mismo nombre, existiría la posibilidad de marcar todas las opciones simultáneamente, lo cual no es comportamiento esperado para un conjunto de radio.
+        </p>
+        <div class="center">
+            <iframe width="838" height="570" src="https://www.youtube.com/embed/msAnWXKvKmk" title="HTML - input 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <br>
+        <h3>input radio sin el mismo <span class="celeste">name</span>.</h3>
+<pre><code class="cpp">1    &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"roj"</span>>Rojo: &lt;/<span class="azul">label</span>>
+2       &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"radio"</span> <span class="celeste">id</span>=<span class="naranja">"roj"</span>>
+3       &lt;<span class="azul">br</span>>
+4   &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"azu"</span>>Azul; &lt;/<span class="azul">label</span>>
+5       &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"radio"</span> <span class="celeste">=<span class="naranja">"azu"</span>>
+6           &lt;<span class="azul">br</span>>
+7   &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"ver"</span>>Verde: &lt;/<span class="azul">label</span>>
+8       &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"radio"</span> <span class="azul">id</span>=<span class="naranja">"ver"</span>>
+9       &lt;<span class="azul">br</span>></code></pre>
+
+        <br>
+        <div class="center">
+            <iframe width="778" height="570" src="https://www.youtube.com/embed/hbE1jAxBb7k" title="HTML - input 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p>
+            Este última forma de utilizar el <span class="azul">input</span> de tipo <span class="naranja">radio</span> no es la más común para este propósito, ya que existe un tipo específico de <span class="azul">input</span> diseñado para manejar este tipo de selección: el <span class="naranja"><b>checkbox</b></span>, <code class="gris">&lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"checkbox"</span>></code>. El uso de un <span class="naranja">checkbox</span> es muy similar al de un <span class="naranja">radio</span>, pero con una diferencia fundamental en su funcionalidad.
+        </p>
+        <p>
+            En el caso de los <span class="naranja">checkbox</span>, el <span class="celeste">name</span> de cada <span class="azul">input</span>, <span class="naranja">checkbox</span> debe ser único e independiente entre ellos. Esto significa que cada <span class="naranja">checkbox</span>, como el <span class="naranja">checkbox</span> para el color rojo, debe tener un nombre único, como rojo, red o cualquier otro nombre distinto para diferenciarlo de los demás <span class="naranja">checkbox</span>.
+        </p>
+        <b>¿Por qué es asi?</b>
+        
+        <p>
+            La idea detrás de los <span class="naranja">checkbox</span> es permitir que cada opción sea independiente y seleccionable de forma individual, a diferencia de los botones de <span class="naranja">radio</span>, donde solo se puede seleccionar una opción dentro del grupo.
+        </p>
+<pre><code class="cpp">1    &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"roj"</span>>Rojo: &lt;/<span class="azul">label</span>>
+2       &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"checkbox"</span> <span class="celeste">id</span>=<span class="naranja">"roj"</span> <span class="celeste">value</span>=<span class="naranja">"red"</span> <span class="celeste">name</span>=<span class="naranja">"rojo"</span>>
+3       &lt;<span class="azul">br</span>>
+4       &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"azu"</span>>Azul: &lt;/<span class="azul">label</span>>
+5           &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"checkbox"</span> <span class="celeste">id</span>=<span class="naranja">"azu"</span> <span class="celeste">value</span>=<span class="naranja">"blue"</span> <span class="celeste">name</span>=<span class="naranja">"azul"</span>>
+7           &lt;<span class="azul">br</span>>
+8       &lt;<span class="azul">label</span> <span class="celeste">for</span>=<span class="naranja">"ver"</span>>Verde: &lt;/<span class="azul">label</span>>
+9       &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"checkbox"</span> <span class="celeste">id</span>=<span class="naranja">"ver"</span> <span class="celeste">value</span>=<span class="naranja">"green"</span> <span class="celeste">name</span>=<span class="naranja">"verde"</span>>
+10      &lt;<span class="azul">br</span>></code></pre>
+
+        <br>
+        <div class="center">
+            <iframe width="752" height="459" src="https://www.youtube.com/embed/j5VMEokuAys" title="HTML - input 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <h3>button</h3>
+
+        <p>
+            Este tipo de <code class="gris">input</code> se utiliza para crear un botón en un formulario. Es importante proporcionar una declaración al atributo <span class="celeste">value</span>, de lo contrario, el botón aparecerá vacío.
+        </p>
+<pre><code class="cpp">     &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"button"</span>></code></pre>
+
+        <div class="center">
+            <img src="Imagenes/imagen13.png" alt="">
+        </div>
+        <p>
+            Añadiremos algún valor:
+        </p>
+<pre><code class="cpp">     &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"button"</span> <span class="celeste">value</span>=<span class="naranja">"Aceptar"</span>></code></pre>
+
+        <br>
+        <div class="center">
+            <img src="Imagenes/imagen14.png" alt="">
+        </div>
+        <br>
+
+        <h3>color</h3>
+        <p>
+            La siguiente etiqueta de <span class="azul">input</span> es la de tipo <span class="naranja">color</span>.
+        </p>
+<pre><code class="cpp">     &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"color"</span> <span class="celeste">name</span>=<span class="naranja">"colores"</span>></code></pre>
+        <p>
+            Donde nos da la opción de poder seleccionar colores.
+        </p>
+        <div class="center">
+            <img src="Imagenes/imagen15.png" alt="">
+        </div>
+        <br>
+
+        <h3>date</h3>
+        <p>
+            <span class="azul">input</span> de tipo <span class="naranja">date</span>, sirve para seleccionar fechas.
+        </p>
+<pre><code class="cpp">         &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"date"</span> <span class="celeste">name</span>=<span class="naranja">"fecha"</span>></code></pre>
+
+        <br>
+        <div class="center">
+            <img src="Imagenes/imagen16.png" alt="">
+        </div>
+        <br>
+        <p>
+            También tenemos una muy similar que es el <code class="gris">datetime-local</code>, que nos sirve para seleccionar fechas y además tiempo.
+        </p>
+<pre><code class="cpp">     &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"datetime-local"</span> <span class="celeste">name</span>=<span class="naranja">"fechaYhora"</span>></code></pre><br>
+        <div class="center">
+            <img src="Imagenes/imagen17.png" alt="">
+        </div>
+        <br>
+        <h3>file</h3>
+        <p>
+            El siguiente <span class="azul">input</span> es el de tipo <span class="naranja">file</span>, que nos permite seleccionar un archivo de nuestro equipo.
+        </p>
+<pre><code class="cpp">         &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"file"</span> <span class="celeste">name</span>=<span class="naranaja">"archivos"</span>></code></pre><br>
+        <div class="center">
+            <img src="Imagenes/imagen18.png" alt="">
+        </div>
+        <br>
+        <p>
+            Cuando hacemos clic en <code class="gris"><i>Seleccionar archivo</i></code>, nos emerge una ventana de navegación del sistema operativo.
+        </p>
+        <div class="center">
+            <img src="Imagenes/imagen19.png" alt="">
+        </div>
+        <br>
+
+        <h3>month</h3>
+        <p>
+            La siguiente etiqueta de <span class="azul">input</span>es la de <span class="naranja">month</span> muy similar a la de <span class="naranja">date</span>, solo que nos deja seleccionar mes y año.
+        </p>
+<pre><code class="cpp">         &lt;<span class="azul">input</span> <span class="celeste">type</span>=<span class="naranja">"month"</span> <span class="celeste">name</span>=<span class="naranja">"mesYaño"</span>></code></pre><br>
+        <div class="center">
+            <img src="Imagenes/imagen20.png" alt="">
+        </div>
+        <br>
+        <h3>textarea</h3>
+        <p>
+            El elemento <span class="gris">textarea</span> en <code>HTML</code> se utiliza para que el usuario pueda ingresar texto en múltiples líneas, a difencia de un <code class="gris">input type="text"</code>, que solo permite una sola línea de texto.
+        </p>
+<pre><code class="cpp">     &lt;<span class="azul">textarea</span> <span class="celeste">name</span>=<span class="naranja">"comentario"</span> <span class="celeste">rows</span>=<span class="naranja">"5"</span> <span class="celeste">cols</span>=<span class="naranja">"40"</span>>&lt;/<span class="azul">textarea</span>></code></pre><br>
+        <div class="center">
+            <img src="Imagenes/imagen21.png" alt="">
+        </div>
+        <br>
+        <h3>number</h3>
+        <p>
+            Siguiente <span class="azul">input</span> es el de <span class="naranja">number</span>, este <span class="azul">input</span> solo nos permite seleccionar números.
+        </p>
+<pre><code class="cpp">     &lt;<span class="naranja">input</span> <span class="celeste">type</span>=<span class="naranja">"number"</span> <span class="celeste">name</span>=<span class="naranja">"numeros"</span>></code></pre>
+        <div class="center">
+            <img src="Imagenes/imagen22.png" alt="">
+        </div>
+        <br>
+</body>
+</html>
